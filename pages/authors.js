@@ -20,7 +20,7 @@ function AuthorHome() {
   // TODO: make the call to the API to get all the books on component render
   useEffect(() => {
     getAllTheAuthors();
-  }, []);
+  });
 
   return (
     <div className="text-center my-4">
