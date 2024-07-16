@@ -99,6 +99,7 @@ function BookForm({ obj }) {
           name="author_id"
           onChange={handleChange}
           className="mb-3"
+          key={formInput.author_id}
           value={formInput.author_id} // FIXME: modify code to remove error
           required
         >
