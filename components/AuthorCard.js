@@ -9,7 +9,7 @@ function AuthorCard({ authorObj, onUpdate }) {
   // FOR DELETE, WE NEED TO REMOVE THE AUTHOR AND HAVE THE VIEW RERENDER,
   // SO WE PASS THE FUNCTION FROM THE PARENT THAT GETS THE AUTHORS
   const deleteThisAuthor = () => {
-    if (window.confirm(`Delete ${authorObj.email}?`)) {
+    if (window.confirm(`Delete ${authorObj.first_name}?`)) {
       deleteSingleAuthor(authorObj.firebaseKey).then(() => onUpdate());
     }
   };
@@ -29,7 +29,7 @@ function AuthorCard({ authorObj, onUpdate }) {
           <Button variant="info">EDIT</Button>
         </Link>
         <Button variant="danger" onClick={deleteThisAuthor} className="m-2">
-          DELETE
+          DELETE AUTHOR
         </Button>
       </Card.Body>
     </Card>
